@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   my_lib.cpp                                         :+:      :+:    :+:   */
+/*   main_test.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trobicho <trobicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/12 00:23:08 by trobicho          #+#    #+#             */
-/*   Updated: 2019/08/12 01:45:17 by trobicho         ###   ########.fr       */
+/*   Created: 2019/08/12 01:38:40 by trobicho          #+#    #+#             */
+/*   Updated: 2019/08/12 01:47:04 by trobicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_lib.h"
+#include <iostream>
 
-std::random_device	trl::m_rd;
-std::mt19937		trl::m_mt(m_rd());
-
-auto&	trl::req_mt(void)
+int	main()
 {
-	return (m_mt);
-}
-
-auto&	trl::req_rd(void)
-{
-	return (m_rd);
-}
-
-int		trl::rand_normal_int(int min, int max)
-{
-	std::uniform_int_distribution<int>		dis(min, max);
-
-	return (dis(m_mt));
-}
-
-double	trl::rand_normal_double(double min, double max)
-{
-	std::uniform_real_distribution<double>	dis(min, max);
-
-	return (dis(m_mt));
+	for(int i = 0; i < 20; i++)
+	{
+		std::cout << trl::rand_normal_int(-10, 10) << " ";
+	}
+	std::cout << std::endl;
+	for(int i = 0; i < 20; i++)
+	{
+		std::cout << trl::rand_normal_double(-1, 1) << " ";
+	}
+	std::cout << std::endl;
 }
