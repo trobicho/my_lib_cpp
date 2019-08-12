@@ -6,7 +6,7 @@
 /*   By: trobicho <trobicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 00:23:08 by trobicho          #+#    #+#             */
-/*   Updated: 2019/08/12 02:14:01 by trobicho         ###   ########.fr       */
+/*   Updated: 2019/08/12 02:39:06 by trobicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 std::random_device	trl::m_rd;
 std::mt19937		trl::m_mt(m_rd());
 
-auto&	trl::req_mt(void)
+auto&	trl::req_mt_ref(void)
 {
 	return (m_mt);
 }
 
-auto&	trl::req_rd(void)
+auto&	trl::req_rd_ref(void)
 {
 	return (m_rd);
 }
