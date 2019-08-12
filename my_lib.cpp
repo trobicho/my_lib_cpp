@@ -6,7 +6,7 @@
 /*   By: trobicho <trobicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 00:23:08 by trobicho          #+#    #+#             */
-/*   Updated: 2019/08/12 04:05:37 by trobicho         ###   ########.fr       */
+/*   Updated: 2019/08/12 17:48:42 by trobicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ double	trl::rand_uniform_double(double min, double max)
 
 int		trl::wheel_sigma(int limit) //Whoa this is bad!!!
 {
-    return (limit - wheel_sigma(limit));
+    return (limit - wheel_sigma_rank(limit));
 }
 
 int		trl::wheel_sigma_rank(int limit) //Whoa this is bad!!!
