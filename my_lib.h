@@ -6,7 +6,7 @@
 /*   By: trobicho <trobicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 00:23:09 by trobicho          #+#    #+#             */
-/*   Updated: 2019/08/12 01:13:56 by trobicho         ###   ########.fr       */
+/*   Updated: 2019/08/12 02:13:28 by trobicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ class	trl
 		//static void	set_mt(mt &mt); for setting a define seed when needed;
 		static auto&	req_mt(void);
 		static auto&	req_rd(void);
-		static int		rand_normal_int(int min, int max);
-		static double	rand_normal_double(double min, double max);
+		static int		rand_uniform_int(int min, int max);
+		static double	rand_uniform_double(double min, double max);
+		static int		wheel_sigma(int n);
+		static int		wheel_sigma_rank(int n);
 
 	private:
 		static std::random_device	m_rd;
