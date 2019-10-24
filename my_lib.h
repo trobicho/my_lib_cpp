@@ -6,7 +6,7 @@
 /*   By: trobicho <trobicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 00:23:09 by trobicho          #+#    #+#             */
-/*   Updated: 2019/08/12 04:05:27 by trobicho         ###   ########.fr       */
+/*   Updated: 2019/10/24 17:21:26 by trobicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class	trl
 		static double			rand_uniform_double(double min, double max);
 		static int				wheel_sigma(int n);
 		static int				wheel_sigma_rank(int n);
+		static double			sigmoid(double x, double k = 1.0);
 
 	private:
 		static random_device	m_rd;

@@ -6,7 +6,7 @@
 /*   By: trobicho <trobicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 00:23:08 by trobicho          #+#    #+#             */
-/*   Updated: 2019/08/12 17:48:42 by trobicho         ###   ########.fr       */
+/*   Updated: 2019/10/24 17:21:34 by trobicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,9 @@ int		trl::wheel_sigma_rank(int limit) //Whoa this is bad!!!
     else
         result = max;
     return (limit - result);
+}
+
+double			sigmoid(double x, double k);
+{
+	return 1/(1+exp(-(x/k)));
 }
