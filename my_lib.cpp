@@ -6,7 +6,7 @@
 /*   By: trobicho <trobicho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 00:23:08 by trobicho          #+#    #+#             */
-/*   Updated: 2019/10/24 17:22:35 by trobicho         ###   ########.fr       */
+/*   Updated: 2019/10/30 11:26:13 by trobicho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,12 @@ int		trl::wheel_sigma_rank(int limit) //Whoa this is bad!!!
     return (limit - result);
 }
 
-double			sigmoid(double x, double k)
+double			trl::sigmoid(double x, double k)
 {
 	return 1/(1+exp(-(x/k)));
+}
+
+double			trl::logistic_steep(double x)
+{
+	return 1/(1+exp(-4.9 * x));
 }
